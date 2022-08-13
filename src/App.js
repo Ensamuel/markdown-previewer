@@ -1,19 +1,19 @@
 import React from 'react';
 import './App.css';
-
+import pic from './antenna.jpg'
 let marked = require('marked');
 
 export default class App extends React.Component{
  constructor(props){
   super(props);
   this.state = {
-    markdown: '  <h1>We make history</h1><h2>We make change</h2><h4><a href="www.google.com">our site</a></h4><p>this is it</p><ul><li>credible</li><li>reliable</li></ul><blockquote>people with passion</blockquote><img src="images\antenna.jpg" alt="antenna" /><p><b>we are happy to serve you</b></p>'
+    markdown: '  <h1>We make history</h1><h2>We make change</h2><h4><a href="www.google.com">our site</a></h4><p>this is it</p><ul><li>credible</li><li>reliable</li></ul><blockquote>people with passion</blockquote><img src={pic} alt="antenna" /><p><b>we are happy to serve you</b></p>'
   }
   this.handleChange = this.handleChange.bind(this)
  } 
 
   handleChange(markdown){
-    this.setState({markdown})
+    this.setState(this.state.markdown)
   }
   render(){
 
